@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dip"
+    tools:ignore="HardcodedText" >
+
+    <TextView
+        android:id="@+id/textViewEventNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/event_info_name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textViewEventGenreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewEventNameLabel"
+        android:layout_below="@+id/textViewEventNameLabel"
+        android:text="@string/event_info_genre"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textViewLocationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewEventGenreLabel"
+        android:layout_below="@+id/textViewEventGenreLabel"
+        android:text="@string/event_info_location"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="14sp" />
+
+     <TextView
+         android:id="@+id/textViewEventGenre"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/textViewEventLocation"
+         android:layout_toRightOf="@+id/textViewEventGenreLabel"
+         android:text="TextView"
+         android:textSize="14sp" />
+
+     <TextView
+         android:id="@+id/textViewEventLocation"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/textViewEventPriceLabel"
+         android:layout_toRightOf="@+id/textViewLocationLabel"
+         android:text="TextView"
+         android:textSize="14sp" />
+
+     <TextView
+         android:id="@+id/textViewAddress"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/textViewAddressLabel"
+         android:layout_alignBottom="@+id/textViewAddressLabel"
+         android:layout_toRightOf="@+id/textViewAddressLabel"
+         android:text="TextView"
+         android:textSize="14sp" />
+
+     <TextView
+         android:id="@+id/textViewEventName"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/textViewEventGenreLabel"
+         android:layout_toRightOf="@+id/textViewEventNameLabel"
+         android:text="TextView"
+         android:textSize="14sp" />
+
+     <TextView
+         android:id="@+id/textViewAddressLabel"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/textViewLocationLabel"
+         android:layout_below="@+id/textViewEventPriceLabel"
+         android:text="@string/event_info_address"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textSize="14sp" />
+
+     <TextView
+         android:id="@+id/textViewEventPriceLabel"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/textViewLocationLabel"
+         android:layout_toLeftOf="@+id/textViewEventPrice"
+         android:text="@string/event_info_price"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textSize="14sp" />
+
+     <TextView
+         android:id="@+id/textViewEventPrice"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_below="@+id/textViewEventLocation"
+         android:layout_marginRight="14dp"
+         android:text="TextView"
+         android:textSize="14sp" />
+
+     <TextView
+         android:id="@+id/textViewEventDateLabel"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/textViewAddressLabel"
+         android:layout_alignLeft="@+id/textViewAddressLabel"
+         android:text="@string/event_info_start_date"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textSize="14sp"  />
+
+     <TextView
+         android:id="@+id/textViewEventStartDate"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/textViewAddress"
+         android:layout_toRightOf="@+id/textViewEventDateLabel"
+         android:text="TextView" 
+         android:textSize="14sp"/>
+
+</RelativeLayout>

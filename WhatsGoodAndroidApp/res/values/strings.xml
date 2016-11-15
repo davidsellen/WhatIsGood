@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Qual é a BOA?</string>
+    <string name="action_settings">Settings</string>
+    <string name="textViewSubTitleValue">Informe o gênero e veja os eventos na cidade</string>
+    <string name="genre_filter_hint">"exemplo: rock "</string>
+    <string name="event_info_name">"Nome: "</string>
+    <string name="event_info_genre">"Gênero: "</string>
+    <string name="event_info_location">"Local: "</string>
+    <string name="event_info_price">"Preço: "</string>
+	<string name="event_info_time">"Início: "</string>
+	<string name="button_search">"Pesquisar"</string>
+	<string name="event_info_address">"Endereço: "</string>
+	<string name="event_info_start_date">"Início: "</string>
+</resources>
