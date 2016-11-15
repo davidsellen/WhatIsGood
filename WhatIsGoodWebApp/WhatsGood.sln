@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "WhatsGood.Repository\Repository.csproj", "{3F546167-DCA3-4210-8FBF-6F3290EA328D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{DE04324E-ADF8-4B33-85D9-97D679A7A279}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crosscuting.Services", "WhatsGood.Crosscuting.Services\Crosscuting.Services.csproj", "{9E032E0C-298D-41B3-9FD4-4BD927BB0C47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RootComposition", "WhatsGood.RootComposition\RootComposition.csproj", "{2DB6B5BA-193B-4BBE-93D7-4318A457F9BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{93323052-7896-4C34-9BA0-A32312964E97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Root", "0 - Root", "{C6D03B92-6172-4C91-B820-60A98D1A0586}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{5729F488-F9AF-4825-B35C-F2D805B13A06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{7AD6B4FB-921A-4295-A5BB-7D5607C132F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Tests", "4 - Tests", "{EBB9033B-6A90-4772-8619-4A1641AE1555}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Crosscuting", "5 - Crosscuting", "{1313C7FE-CECE-419E-8F59-C2DA5059DA9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7C5F6B13-BC45-493B-9F83-3B203CF9248C}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatsGood.Presentation.Web", "WhatsGood.Presentation.Web\WhatsGood.Presentation.Web.csproj", "{6E205E45-2255-4179-9E7C-E1358F396242}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dscode.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WhatsGood.Crosscuting.Services\\Crosscuting.Services.csproj
+		SccProjectTopLevelParentUniqueName1 = WhatsGood.sln
+		SccProjectName1 = WhatsGood.Crosscuting.Services
+		SccLocalPath1 = WhatsGood.Crosscuting.Services
+		SccProjectUniqueName2 = Domain\\Domain.csproj
+		SccProjectTopLevelParentUniqueName2 = WhatsGood.sln
+		SccProjectName2 = Domain
+		SccLocalPath2 = Domain
+		SccProjectUniqueName3 = WhatsGood.Repository\\Repository.csproj
+		SccProjectTopLevelParentUniqueName3 = WhatsGood.sln
+		SccProjectName3 = WhatsGood.Repository
+		SccLocalPath3 = WhatsGood.Repository
+		SccProjectUniqueName4 = WhatsGood.RootComposition\\RootComposition.csproj
+		SccProjectTopLevelParentUniqueName4 = WhatsGood.sln
+		SccProjectName4 = WhatsGood.RootComposition
+		SccLocalPath4 = WhatsGood.RootComposition
+		SccProjectUniqueName5 = WhatsGood.Presentation.Web\\WhatsGood.Presentation.Web.csproj
+		SccProjectTopLevelParentUniqueName5 = WhatsGood.sln
+		SccProjectName5 = WhatsGood.Presentation.Web
+		SccLocalPath5 = WhatsGood.Presentation.Web
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F546167-DCA3-4210-8FBF-6F3290EA328D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F546167-DCA3-4210-8FBF-6F3290EA328D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F546167-DCA3-4210-8FBF-6F3290EA328D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F546167-DCA3-4210-8FBF-6F3290EA328D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE04324E-ADF8-4B33-85D9-97D679A7A279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE04324E-ADF8-4B33-85D9-97D679A7A279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE04324E-ADF8-4B33-85D9-97D679A7A279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE04324E-ADF8-4B33-85D9-97D679A7A279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E032E0C-298D-41B3-9FD4-4BD927BB0C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E032E0C-298D-41B3-9FD4-4BD927BB0C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E032E0C-298D-41B3-9FD4-4BD927BB0C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E032E0C-298D-41B3-9FD4-4BD927BB0C47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DB6B5BA-193B-4BBE-93D7-4318A457F9BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DB6B5BA-193B-4BBE-93D7-4318A457F9BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DB6B5BA-193B-4BBE-93D7-4318A457F9BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DB6B5BA-193B-4BBE-93D7-4318A457F9BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E205E45-2255-4179-9E7C-E1358F396242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E205E45-2255-4179-9E7C-E1358F396242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E205E45-2255-4179-9E7C-E1358F396242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E205E45-2255-4179-9E7C-E1358F396242}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3F546167-DCA3-4210-8FBF-6F3290EA328D} = {7AD6B4FB-921A-4295-A5BB-7D5607C132F7}
+		{DE04324E-ADF8-4B33-85D9-97D679A7A279} = {5729F488-F9AF-4825-B35C-F2D805B13A06}
+		{9E032E0C-298D-41B3-9FD4-4BD927BB0C47} = {1313C7FE-CECE-419E-8F59-C2DA5059DA9B}
+		{2DB6B5BA-193B-4BBE-93D7-4318A457F9BB} = {C6D03B92-6172-4C91-B820-60A98D1A0586}
+		{6E205E45-2255-4179-9E7C-E1358F396242} = {93323052-7896-4C34-9BA0-A32312964E97}
+	EndGlobalSection
+EndGlobal

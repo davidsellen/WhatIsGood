@@ -1,0 +1,60 @@
+﻿
+<form name='currentArtist' class="form-horizontal">
+
+    <accordion close-others="true">
+
+        <accordion-group heading="Informações Gerais *" is-open="true">
+
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Nome</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="name"
+                           placeholder="Nome" ng-model="currentArtist.name" ng-required="true">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="webSiteUrl" class="col-sm-2 control-label">Web Site</label>
+                <div class="col-sm-5">
+                    <input type="url" class="form-control" id="webSiteUrl"
+                           ng-model="currentArtist.webSiteUrl" ng-required="false">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">E-mail</label>
+                <div class="col-sm-5">
+                    <input type="email" class="form-control" id="email"
+                           ng-model="currentArtist.email" ng-required="false">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="countryName" class="col-sm-2 control-label">País de Origem</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="countryName"
+                           ng-model="currentArtist.countryName" ng-required="false">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="genreSelect" class="col-sm-2 control-label">Gênero</label>
+                <div class="col-sm-5">
+                    <select id="genreSelect" ng-model="currentArtist.genre"
+                            ng-options="i.description for i in genres" class="form-control" ng-required="false">
+                        <option value="">.: Selecione um Gênero :.</option>
+                    </select>
+                </div>
+            </div>
+
+        </accordion-group>
+    </accordion>
+    <div class="form-group">
+        <div class="col-sm-offset-10 col-sm-10">
+            <button type="submit" class="btn btn-primary" ng-click="save()">Salvar</button>
+            <button type="button" class="btn btn-warning" ng-click="cancel()">Cancelar</button>
+        </div>
+    </div>
+
+</form>
+

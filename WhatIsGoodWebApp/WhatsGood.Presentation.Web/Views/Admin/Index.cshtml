@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts{
+    <script src="~/common/services/breadcrumbs.js"></script>
+    <script src="~/App/admin/whatsgood-admin-module.js"></script>
+
+    <script src="~/App/admin/home/home-controller.js"></script>
+
+    <script src="~/App/admin/events/event-repository.js"></script>
+    <script src="~/App/admin/events/list-event-controller.js"></script>
+    <script src="~/App/admin/events/new-event-controller.js"></script>
+
+    <script src="~/App/admin/artists/artist-repository.js"></script>
+    <script src="~/App/admin/artists/list-artist-controller.js"></script>
+    <script src="~/App/admin/artists/save-artist-controller.js"></script>
+
+    <script src="~/App/admin/genres/genre-repository.js"></script>
+    <script src="~/App/admin/genres/list-genre-controller.js"></script>
+    <script src="~/App/admin/genres/save-genre-controller.js"></script>
+
+    <script src="~/App/admin/establishments/establishment-repository.js"></script>
+    <script src="~/App/admin/establishments/list-establishment-controller.js"></script>
+    <script src="~/App/admin/establishments/save-establishment-controller.js"></script>
+
+    <script src="~/App/admin/establishment-types/establishment-type-repository.js"></script>
+    <script src="~/App/admin/establishment-types/list-establishment-type-controller.js"></script>
+    <script src="~/App/admin/establishment-types/save-establishment-type-controller.js"></script>
+
+    <script src="~/App/admin/shared/header-controller.js"></script>
+    
+    <script charset="UTF-8" src="https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&mkt=pt-BR,en-us"></script>
+
+}
+
+<ng-view></ng-view>

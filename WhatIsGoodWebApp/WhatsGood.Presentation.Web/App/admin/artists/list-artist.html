@@ -1,0 +1,28 @@
+﻿<div class="row">
+    <button type="button" class="btn btn-success" ng-click="create()" style="margin-bottom: 15px;">Cadastrar</button>    
+</div>
+
+<div class="row">
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Gênero</th>
+                <th>País</th>
+                <th>Site</th>
+                <th style="width:20px;"> </th>
+                <th style="width:20px;"> </th>
+            </tr>
+            <tr ng-repeat="artist in artists | filter:query">
+                <td>{{artist.artistId}}</td>
+                <td>{{artist.name}}</td>
+                <td>{{artist.genreDescription}}</td>
+                <td>{{artist.countryName}}</td>
+                <td>{{artist.webSiteUrl}}</td>                           
+                <td><span ng-click="edit(artist.artistId)" class="btn btn-default">Editar</span></td>
+                <td><span ng-click="delete(artist.artistId, $index)" class="btn btn-danger">Excluir</span></td>
+            </tr>
+        </table>
+    </div>
+</div>

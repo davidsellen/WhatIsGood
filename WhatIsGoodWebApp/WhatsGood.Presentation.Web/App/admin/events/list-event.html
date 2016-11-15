@@ -1,0 +1,36 @@
+﻿
+<div class="row">
+
+    <button type="button" class="btn btn-success" ng-click="newEventForm()" style="margin-bottom: 15px;">Cadastrar</button>
+    
+</div>
+
+<div class="row">
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <tr>
+                <th>Descrição</th>
+                <th>Endereço</th>
+                <th>Gênero</th>
+                <th>Artista</th>
+                <th>Preço</th>
+                <th>Início</th>
+                <th style="width:20px;"> </th>
+                <th style="width:20px;"> </th>
+            </tr>
+            <tr ng-repeat="event in events | filter:query">
+                <td>{{event.description}}</td>
+                <td>{{event.eventAddress}}</td>
+                <td>{{event.genreName}}</td>
+                <td>{{event.artistName}}</td>
+                <td>{{event.eventPrice | currency:'R$'}}</td>
+                <td>{{event.startDate | date:'dd/MM/yyyy HH:mm:ss Z'}}</td>
+                <td><span ng-click="edit(event.eventId)" class="btn btn-default">Editar</span></td>
+                <td><span ng-click="delete(event.eventId, $index)" class="btn btn-danger">Excluir</span></td>
+            </tr>
+        </table>
+    </div>
+
+
+</div>

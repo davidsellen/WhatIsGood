@@ -1,0 +1,241 @@
+﻿
+<form name='currentEstablishment' class="form-horizontal">
+
+    <fieldset>
+
+        <legend>Informações Gerais *</legend>
+
+
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Nome</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" placeholder="Nome" ng-model="currentEstablishment.name" ng-required="true">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="capacity" class="col-sm-2 control-label">Capacidade</label>
+            <div class="col-sm-4">
+                <input type="number" class="form-control" id="capacity"
+                       placeholder="0" ng-model="currentEstablishment.capacity" ng-required="true">
+            </div>
+
+            <label for="establishmentType" class="col-sm-2 control-label">Tipo</label>
+            <div class="col-sm-4">
+                <select id="establishmentType"
+                        ng-model="currentEstablishment.establishmentTypeId"
+                        ng-options="i.id as i.name for i in establishmentTypes" class="form-control">
+                    <option value="">.: Selecione um Tipo :.</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="webSiteUrl" class="col-sm-2 control-label">Web Site</label>
+            <div class="col-sm-10">
+                <input type="url" class="form-control" id="webSiteUrl"
+                       ng-model="currentEstablishment.webSiteUrl" ng-required="false">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="accessibility" class="col-sm-2 control-label">Acessibilidade</label>
+            <div class="col-sm-4" id="accessibility">
+                <input type="radio" name="accessibility" ng-model="currentEstablishment.accessibility" ng-value="true" value="true"> Sim
+                <input type="radio" name="accessibility" ng-model="currentEstablishment.accessibility" ng-value="false" value="false"> Não
+            </div>
+            <label for="ownParking" class="col-sm-2 control-label">Estacionamento</label>
+            <div class="col-sm-4" id="ownParking">
+                <input type="radio" name="parking" ng-model="currentEstablishment.ownParking" ng-value="true" value="true"> Sim
+                <input type="radio" name="parking" ng-model="currentEstablishment.ownParking" ng-value="false" value="false"> Não
+            </div>
+        </div>
+
+    </fieldset>
+
+    <fieldset ng-show="currentEstablishment.ownParking">
+        <legend>Estacionamento</legend>
+        <div class="form-group">
+            <label for="parkingCapacity" class="col-sm-2 control-label">Capacidade</label>
+            <div class="col-sm-4">
+                <input type="number" class="form-control" id="parkingCapacity"
+                       placeholder="0" ng-model="currentEstablishment.parking.capacity">
+            </div>
+            <label for="parkingPrice" class="col-sm-2 control-label">Preço</label>
+            <div class="col-sm-4">
+                <input type="number" class="form-control" id="parkingPrice"
+                       placeholder="0" ng-model="currentEstablishment.parking.price">
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Endereço *</legend>
+
+        <div class="form-group">
+            <label for="searchAddress" class="col-sm-2 control-label">Pesquisa</label>
+            <div class="col-sm-10">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="searchAddress" ng-model="addressSearchText"
+                           placeholder="Exemplo: rua a, 100, rio de janeiro." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" ng-click="searchAddress()">Procurar</button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-offset-2 col-sm-10" ng-show="searchingAddress == false">
+                <div id="mapArea" >
+                    <div id="SDKmap"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Latitude</label>
+            <div class="col-sm-4">
+                {{currentEstablishment.address.latitude}}
+            </div>
+
+            <label class="col-sm-2 control-label">Longitude</label>
+            <div class="col-sm-4">
+                {{currentEstablishment.address.longitude}}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="streetName" class="col-sm-2 control-label">Logradouro</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="streetName" ng-disabled="searchingAddress"
+                       ng-model="currentEstablishment.address.streetName" ng-required="false">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="complement" class="col-sm-2 control-label">Complemento</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="complement"
+                       ng-model="currentEstablishment.address.complement" ng-required="false">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="addressNumber" class="col-sm-2 control-label">Número</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="addressNumber"
+                       ng-model="currentEstablishment.address.number" ng-required="false">
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label for="addressPostalCode" class="col-sm-2 control-label">CEP</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="addressPostalCode" ng-disabled="searchingAddress"
+                       ng-model="currentEstablishment.address.postalCode" ng-required="false">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="addressDistrict" class="col-sm-2 control-label">Bairro</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="addressDistrict"
+                       ng-model="currentEstablishment.address.district" ng-required="false">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="addressCity" class="col-sm-2 control-label">Cidade</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="addressCity" ng-disabled="searchingAddress"
+                       ng-model="currentEstablishment.address.city" ng-required="false">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="addressProvince" class="col-sm-2 control-label">Estado</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="addressProvince" ng-disabled="searchingAddress"
+                       ng-model="currentEstablishment.address.province" ng-required="false">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="addressCountry" class="col-sm-2 control-label">Pais</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="addressCountry" ng-disabled="searchingAddress"
+                       ng-model="currentEstablishment.address.country" ng-required="false">
+            </div>
+        </div>
+
+
+        <input type="hidden" id="addressLatitude" ng-model="currentEstablishment.address.latitude" />
+        <input type="hidden" id="addressLongitude" ng-model="currentEstablishment.address.longitude" />
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Contato</legend>
+        <div class="form-group">
+            <label for="contactFirstName" class="col-sm-2 control-label">Primeiro Nome</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="contactFirstName"
+                       ng-model="currentEstablishment.contact.firstName" ng-required="false">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="contactLastName" class="col-sm-2 control-label">Último Nome</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="contactLastName"
+                       ng-model="currentEstablishment.contact.lastName" ng-required="false">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="contactEmailAddress" class="col-sm-2 control-label">E-mail</label>
+            <div class="col-sm-5">
+                <input type="email" class="form-control" id="contactEmailAddress"
+                       ng-model="currentEstablishment.contact.emailAddress" ng-required="false">
+            </div>
+
+            <div class="field-validation-error"
+                 ng-show="currentEstablishment.contact.emailAddress.$dirty && currentEstablishment.contact.emailAddress.$invalid">
+                <small class="has-error"
+                       ng-show="currentEstablishment.contact.emailAddress.$error.required">
+                    Your email is required.
+                </small>
+                <small class="has-error"
+                       ng-show="currentEstablishment.contact.emailAddress.$error.email">
+                    That is not a valid email. Please input a valid email.
+                </small>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="contactPhoneNumber" class="col-sm-2 control-label">Telefone</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="contactPhoneNumber"
+                       ng-model="currentEstablishment.contact.phoneNumber" ng-required="false">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="contactBirthDate" class="col-sm-2 control-label">Aniversário</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="contactBirthDate"
+                       ng-model="currentEstablishment.contact.birthDate" ng-required="false">
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="form-group">
+        <div class="col-sm-offset-10 col-sm-10">
+            <button type="submit" class="btn btn-primary" ng-click="save()">Salvar</button>
+            <button type="button" class="btn btn-warning" ng-click="cancel()">Cancelar</button>
+        </div>
+    </div>
+
+</form>
+

@@ -1,0 +1,30 @@
+﻿
+<div class="row">
+
+    <button type="button" class="btn btn-success" ng-click="create()" style="margin-bottom: 15px;">Cadastrar</button>
+    
+</div>
+
+<div class="row">
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Site</th>
+                <th style="width:20px;"> </th>
+                <th style="width:20px;"> </th>
+            </tr>
+            <tr ng-repeat="establishment in establishments | filter:query">
+                <td>{{establishment.establishmentId}}</td>
+                <td>{{establishment.name}}</td>
+                <td>{{establishment.webSiteUrl}}</td>
+                <td><span ng-click="edit(establishment.establishmentId)" class="btn btn-default">Editar</span></td>
+                <td><span ng-click="delete(establishment.establishmentId, $index)" class="btn btn-danger">Excluir</span></td>                
+            </tr>
+        </table>
+    </div>
+
+
+</div>
